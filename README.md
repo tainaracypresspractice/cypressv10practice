@@ -2,7 +2,7 @@
 Cypress v10 Practice
 
 
-## Installation
+### Installation
 
 1. Install node most recent version
 https://nodejs.org/en/download/?utm_source=blog
@@ -13,16 +13,23 @@ https://nodejs.org/en/download/?utm_source=blog
 
 
 
-## Create your your own Cypress project
+### Create your own Cypress project
 
 
 
-2. ```cd project-name```
+1. ```cd project-name```
 
-3. ```npm init```
+2. ```npm init```
 
-4. ``` npm install --save-dev cypress@12.6.0 ```
+3. ``` npm install --save-dev cypress@12.6.0 ```
 
 
-## Cypress Test Runner
+### Cypress Test Runner
 ```./node_modules/.bin/cypress open```
+
+
+### Tips ###
+
+Understand CSS selectors: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
+
+Understand XPath selectors: https://www.w3schools.com/xml/xpath_syntax.asp
