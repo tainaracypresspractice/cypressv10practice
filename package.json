@@ -1,0 +1,15 @@
+{
+  "name": "cypress-practice",
+  "version": "1.0.0",
+  "description": "Cypress v12 Practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tainara Reis",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^12.6.0"
+  }
+}
