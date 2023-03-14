@@ -1,5 +1,6 @@
 
 
+## then
 If you are going to use non cypress commands, remember that Cypress commands are promises. So you'll need to use ```then``` to guarantee the commands will run one by one (in a sequence): https://docs.cypress.io/guides/core-concepts/introduction-to-cypress#Using-then-To-Act-On-A-Subject
 Inside ```then``` use javascript commands (not cypress commands)
 
@@ -22,3 +23,9 @@ it("Navigating to specific product pages", () => {
 Promisses são objetos, que passamos como parâmetro outra função. Esta função possui dois parâmetros: resolve e reject
 
 ![Captura de Tela 2023-03-12 às 16 14 53](https://user-images.githubusercontent.com/4117764/224567461-ad0e42da-831a-45d8-9510-0aceff339291.png)
+
+## .invoke
+
+Invokes JQuery functions: https://api.jquery.com/
+
+![Captura de Tela 2023-03-13 às 16 55 46](https://user-images.githubusercontent.com/4117764/224817850-b20b112a-726c-424b-b278-cdb80c79c40f.png)
