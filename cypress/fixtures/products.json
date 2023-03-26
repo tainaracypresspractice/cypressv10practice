@@ -1,0 +1,13 @@
+{
+    "cart": {
+        "product_1": {
+            "title": "Absolute Anti-Age Spot Replenishing Unifying TreatmentSPF 15",
+            "price": "42"
+        },
+        "product_2": {
+            "title": "Total Moisture Facial Cream",
+            "price": "38"
+        },
+        "cartTotal": 80
+    }
+}
