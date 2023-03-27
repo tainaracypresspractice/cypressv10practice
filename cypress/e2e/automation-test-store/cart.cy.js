@@ -20,6 +20,10 @@ describe('Cart', () => {
     })
   }
 
+  beforeEach(() => {
+    cy.visit('https://automationteststore.com/')
+  });
+
   it('Cart total is correct', () => {
     cy.fixture('products.json').then(products => {
       const product1 = products.cart.product_1.title
@@ -41,7 +45,7 @@ describe('Cart', () => {
 
           //Sums product_2 to the total
           sumToCartTotal($productTitle)
-          
+
         }).then(() => {
           cy.log(cartTotal)
           cy.get('.cart_total').then(($pageCartTotal) => {
@@ -51,8 +55,8 @@ describe('Cart', () => {
             expect(cartTotal).to.equal($pageCartTotal)
           })
         })
-      
-      
+
+
     })
 
   });

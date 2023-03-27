@@ -3,7 +3,11 @@
 describe('Practicing different ways of asserting elements quantity', () => {
 
     const totalOfelements = 16
-    
+
+    beforeEach(() => {
+        cy.visit('https://automationteststore.com/')
+    });
+
     it('Option 1: using Jquery', () => {
         cy.get('.thumbnail').invoke('size').should('equal', totalOfelements)
     })
