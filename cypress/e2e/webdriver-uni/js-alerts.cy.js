@@ -3,12 +3,11 @@
 describe("Handle js alerts", () => {
   beforeEach(() => {
     cy.visit('https://www.webdriveruniversity.com/')
+    //Clicks on Popup & Alerts at the same tab
+    cy.get('#popup-alerts').invoke('removeAttr', 'target').click({force:true})
   });
 
   it("Confirm the alert contains the correct text", () => {
-    //Clicks on Popup & Alerts at the same tab
-    cy.get('#popup-alerts').invoke('removeAttr', 'target').click({force:true})
-
     cy.get('#button1').click()
 
     cy.on('window:alert', (str) => {
@@ -17,8 +16,6 @@ describe("Handle js alerts", () => {
   });
 
   it("Validate confirm alert box when OK is pressed", () => {
-    cy.get('#popup-alerts').invoke('removeAttr', 'target').click({force:true})
-
     cy.get('#button4').click()
 
     cy.on('window:alert', (str) => {
@@ -29,8 +26,6 @@ describe("Handle js alerts", () => {
   });
 
   it("Validate confirm alert box when Cancel is pressed", () => {
-    cy.get('#popup-alerts').invoke('removeAttr', 'target').click({force:true})
-
     cy.get('#button4').click()
 
     cy.on('window:confirm', (str) => {
@@ -41,12 +36,9 @@ describe("Handle js alerts", () => {
   });
 
   it.only("Validate the message inside alert box using STUB", () => {
-    cy.get('#popup-alerts').invoke('removeAttr', 'target').click({force:true})
-
     const stub = cy.stub() 
 
     cy.on('window:confirm', stub)
-
 
     cy.get('#button4').click().then(() => {
       expect(stub.getCall(0)).to.be.calledWith('Press a button!') //Validates the message inside the alert
